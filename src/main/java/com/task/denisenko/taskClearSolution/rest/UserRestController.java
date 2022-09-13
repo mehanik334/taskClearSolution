@@ -55,7 +55,7 @@ public class UserRestController {
     }
 
     @GetMapping("users/findByBirthday")
-    public ResponseEntity<List<User>> findByBirthdayBetween(@RequestParam Date from, @RequestParam Date to) {
+    public ResponseEntity<List<User>> findByBirthdayBetween(@RequestParam LocalDate from, @RequestParam LocalDate to) {
         List<User> findUsers = new ArrayList<>();
         userService.findByBirthdayBetween(from, to).forEach(findUsers::add);
         if (findUsers.isEmpty()) {

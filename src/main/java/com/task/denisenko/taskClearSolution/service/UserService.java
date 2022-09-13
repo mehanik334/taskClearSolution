@@ -3,6 +3,7 @@ package com.task.denisenko.taskClearSolution.service;
 import com.task.denisenko.taskClearSolution.model.User;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -16,5 +17,5 @@ public interface UserService {
 
     void delete(Integer id);
 
-    List<User> findByBirthdayBetween(Date from, Date to);
+    List<User> findByBirthdayBetween(LocalDate from, LocalDate to);
 }

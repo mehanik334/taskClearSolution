@@ -6,6 +6,7 @@ import com.task.denisenko.taskClearSolution.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findByBirthdayBetween(Date from, Date to) {
+    public List<User> findByBirthdayBetween(LocalDate from, LocalDate to) {
         return userRepository.findByBirthdayBetween(from, to);
     }
 }

@@ -4,6 +4,7 @@ import com.task.denisenko.taskClearSolution.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +12,6 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     User replace(Integer id, User user);
-    List<User> findByBirthdayBetween(Date from, Date to);
+    List<User> findByBirthdayBetween(LocalDate from, LocalDate to);
 
 }
